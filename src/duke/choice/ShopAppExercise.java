@@ -62,6 +62,8 @@ public class ShopAppExercise {
         Clothing[] clothingList = new Clothing[2];
         clothingList[0] = item1;
         clothingList[1] = item2;
+        
+        //just a test
 
         System.out.println("Item 1: " + item1.description + ", " + item1.price + ", " + item1.size);
         System.out.println("Item 2: " + item2.description + ", " + item2.price + ", " + item2.size);
