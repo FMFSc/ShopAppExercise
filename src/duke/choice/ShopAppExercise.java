@@ -66,8 +66,8 @@ public class ShopAppExercise {
         
         //just a test 2
 
-        System.out.println("Item 1: " + item1.description + ", " + item1.price + ", " + item1.size);
-        System.out.println("Item 2: " + item2.description + ", " + item2.price + ", " + item2.size);
+ //       System.out.println("Item 1: " + item1.description + ", " + item1.price + ", " + item1.size);
+ //       System.out.println("Item 2: " + item2.description + ", " + item2.price + ", " + item2.size);
 
         
         //total = (item1.price + item2.price * 2) * (1 + tax);
@@ -80,6 +80,10 @@ public class ShopAppExercise {
         
         
         System.out.println("Total = " + total);
+        
+        for (Clothing item : clothingList){
+            System.out.println("Item: "+ item.description + ", " + item.price + ", " + item.size);
+        }
         
         
 
