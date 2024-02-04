@@ -58,12 +58,18 @@ public class ShopAppExercise {
         item2.description = "Orange T-shirt";
         item2.price = 10.5;
         item2.size = "S";
+        
+        Clothing[] clothingList = new Clothing[2];
+        clothingList[0] = item1;
+        clothingList[1] = item2;
 
         System.out.println("Item 1: " + item1.description + ", " + item1.price + ", " + item1.size);
         System.out.println("Item 2: " + item2.description + ", " + item2.price + ", " + item2.size);
 
         total = (item1.price + item2.price * 2) * (1 + tax);
         System.out.println("Total = " + total);
+        
+        
 
     }
 
