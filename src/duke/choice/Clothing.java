@@ -5,6 +5,17 @@ package duke.choice;
  * @author fellipescirea
  */
 public class Clothing {
+    private String description;
+    private double price;
+    private String size = "M";
+    public final double minPrice;
+    public final double taxRate;
+    
+    //Initiating and defining constants
+    {
+        minPrice = 10;
+        taxRate = 0.2;
+    }
 
     /**
      * @return the description
@@ -47,7 +58,5 @@ public class Clothing {
     public void setSize(String size) {
         this.size = size;
     }
-    private String description;
-    private double price;
-    private String size = "M";
+
 }
