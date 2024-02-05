@@ -10,11 +10,9 @@ public class ShopAppExercise {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        double tax;
         double total;
         int measurement;
 
-        tax = 0.2;
         measurement = 3;
         total = 0;
 
@@ -77,14 +75,14 @@ public class ShopAppExercise {
         //just a test 2
         //       System.out.println("Item 1: " + item1.description + ", " + item1.price + ", " + item1.size);
         //       System.out.println("Item 2: " + item2.description + ", " + item2.price + ", " + item2.size);
-        //total = (item1.price + item2.price * 2) * (1 + tax);
+        //total = (item1.price + item2.price * 2);
         //calculating total with a for each loop
         for (Clothing item : clothingList)
         {
 //            System.out.println("Total = " + total);
             if (c1.getSize().equalsIgnoreCase(item.getSize()) && total <= 15)
             {
-                total = total + item.getPrice() * (1 + tax);
+                total = total + item.getPrice();
             }
 
         }
