@@ -23,31 +23,31 @@ public class ShopAppExercise {
 
         Customer c1 = new Customer();
 
-        c1.name = "Pinky";
+        c1.setName("Pinky");
 
-        System.out.println("Customer name is " + c1.name);
+        System.out.println("Customer name is " + c1.getName());
 
-        c1.size = "S";
+        c1.setSize("S");
 
         switch (measurement)
         {
             case 1:
             case 2:
             case 3:
-                c1.size = "S";
+                c1.setSize("S");
                 break;
             case 4:
             case 5:
             case 6:
-                c1.size = "M";
+                c1.setSize("M");
                 break;
             case 7:
             case 8:
             case 9:
-                c1.size = "L";
+                c1.setSize("L");
                 break;
             default:
-                c1.size = "X";
+                c1.setSize("X");
         }
 
         Clothing item1 = new Clothing();
@@ -55,18 +55,18 @@ public class ShopAppExercise {
         Clothing item3 = new Clothing();
         Clothing item4 = new Clothing();
 
-        item1.description = "Blue Jacket";
-        item1.price = 20.9;
-        item1.size = "M";
-        item2.description = "Orange T-shirt";
-        item2.price = 10.5;
-        item2.size = "S";
-        item3.description = "Green Scarf";
-        item3.price = 5;
-        item3.size = "S";
-        item4.description = "Blue T-shirt";
-        item4.price = 10.5;
-        item4.size = "S";
+        item1.setDescription("Blue Jacket");
+        item1.setPrice(20.9);
+        item1.setSize("M");
+        item2.setDescription("Orange T-shirt");
+        item2.setPrice(10.5);
+        item2.setSize("S");
+        item3.setDescription("Green Scarf");
+        item3.setPrice(5);
+        item3.setSize("S");
+        item4.setDescription("Blue T-shirt");
+        item4.setPrice(10.5);
+        item4.setSize("S");
 
         Clothing[] clothingList = new Clothing[4];
         clothingList[0] = item1;
@@ -82,9 +82,9 @@ public class ShopAppExercise {
         for (Clothing item : clothingList)
         {
 //            System.out.println("Total = " + total);
-            if (c1.size.equalsIgnoreCase(item.size) && total <= 15)
+            if (c1.getSize().equalsIgnoreCase(item.getSize()) && total <= 15)
             {
-                total = total + item.price * (1 + tax);
+                total = total + item.getPrice() * (1 + tax);
             }
 
         }
@@ -93,7 +93,7 @@ public class ShopAppExercise {
 
         for (Clothing item : clothingList)
         {
-            System.out.println("Item: " + item.description + ", " + item.price + ", " + item.size);
+            System.out.println("Item: " + item.getDescription() + ", " + item.getPrice() + ", " + item.getSize());
         }
 
     }
