@@ -43,10 +43,7 @@ public class Clothing {
      * @param price the price to set
      */
     public void setPrice(double price) {
-        if (price < MIN_PRICE) {
-            price = MIN_PRICE;
-        }
-        this.price = price;
+        this.price = (price > MIN_PRICE) ? price : MIN_PRICE;
     }
 
     /**
