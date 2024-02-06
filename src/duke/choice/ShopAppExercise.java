@@ -25,28 +25,7 @@ public class ShopAppExercise {
 
         System.out.println("Customer name is " + c1.getName());
 
-        c1.setSize("S");
-
-        switch (measurement)
-        {
-            case 1:
-            case 2:
-            case 3:
-                c1.setSize("S");
-                break;
-            case 4:
-            case 5:
-            case 6:
-                c1.setSize("M");
-                break;
-            case 7:
-            case 8:
-            case 9:
-                c1.setSize("L");
-                break;
-            default:
-                c1.setSize("X");
-        }
+        
 
         Clothing item1 = new Clothing();
         Clothing item2 = new Clothing();
