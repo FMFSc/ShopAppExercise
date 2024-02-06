@@ -24,10 +24,8 @@ public class ShopAppExercise {
         c1.setName("Pinky");
         c1.setSize(3);
 
-        System.out.println("Customer name is " + c1.getName() + "and their size is " + c1.getSize() + ".");
 
 
-        
         Clothing item1 = new Clothing();
         Clothing item2 = new Clothing();
         Clothing item3 = new Clothing();
@@ -46,32 +44,26 @@ public class ShopAppExercise {
         item4.setPrice(10.5);
         item4.setSize("S");
 
-        Clothing[] clothingList = new Clothing[4];
-        clothingList[0] = item1;
-        clothingList[1] = item2;
-        clothingList[2] = item3;
-        clothingList[3] = item4;
+        Clothing[] items = new Clothing[4];
+        items[0] = item1;
+        items[1] = item2;
+        items[2] = item3;
+        items[3] = item4;
+        
+        c1.addItems(items);
 
         //just a test 2
         //       System.out.println("Item 1: " + item1.description + ", " + item1.price + ", " + item1.size);
         //       System.out.println("Item 2: " + item2.description + ", " + item2.price + ", " + item2.size);
         //total = (item1.price + item2.price * 2);
         //calculating total with a for each loop
-        for (Clothing item : clothingList)
+        //System.out.println("Total = " + total);
+        
+        System.out.println("Customer name is " + c1.getName() + "and their size is " + c1.getSize() + ", " + c1.getTotalClothingCost());
+
+        for (Clothing item : c1.getItems())
         {
-//            System.out.println("Total = " + total);
-            if (c1.getSize().equalsIgnoreCase(item.getSize()) && total <= 15)
-            {
-                total = total + item.getPrice();
-            }
-
-        }
-
-        System.out.println("Total = " + total);
-
-        for (Clothing item : clothingList)
-        {
-            System.out.println("Item: " + item.getDescription() + ", " + item.getPrice() + ", " + item.getSize());
+            System.out.println("Item: " + item.getDescription());
         }
 
     }

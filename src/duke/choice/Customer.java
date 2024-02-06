@@ -5,9 +5,10 @@ package duke.choice;
  * @author fellipescirea
  */
 public class Customer {
-    
+
     private String name;
     private String size;
+    private Clothing[] items;
 
     /**
      * @return the name
@@ -36,7 +37,7 @@ public class Customer {
     public void setSize(String size) {
         this.size = size;
     }
-    
+
     /**
      * @param measurement the size to set
      */
@@ -46,22 +47,44 @@ public class Customer {
             case 1:
             case 2:
             case 3:
-                setSize ("S");
+                setSize("S");
                 break;
             case 4:
             case 5:
             case 6:
-                setSize ("M");
+                setSize("M");
                 break;
             case 7:
             case 8:
             case 9:
-                setSize ("L");
+                setSize("L");
                 break;
             default:
-                setSize ("XL");
+                setSize("XL");
         }
-    }    
-    
-    
+    }
+
+    public Clothing[] getItems() {
+        return items;
+    }
+
+    public void addItems(Clothing[] someItems) {
+        items = someItems;
+
+    }
+
+    public double getTotalClothingCost() 
+    {
+        double totalClothingCost = 0.0;
+        
+        for (Clothing item : items)
+        {
+                totalClothingCost = totalClothingCost + item.getPrice();
+
+
+        }
+
+        return totalClothingCost;
+    }
+
 }
