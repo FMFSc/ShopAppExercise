@@ -36,7 +36,7 @@ public class Clothing {
      * @return the price
      */
     public double getPrice() {
-        return price*MIN_TAX;
+        return price*(1 + MIN_TAX);
     }
 
     /**

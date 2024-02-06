@@ -46,20 +46,20 @@ public class Customer {
             case 1:
             case 2:
             case 3:
-                size = "S";
+                setSize ("S");
                 break;
             case 4:
             case 5:
             case 6:
-                size = "M";
+                setSize ("M");
                 break;
             case 7:
             case 8:
             case 9:
-                size = "L";
+                setSize ("L");
                 break;
             default:
-                size = "X";
+                setSize ("X");
         }
     }    
     

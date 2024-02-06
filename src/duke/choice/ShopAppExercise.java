@@ -22,11 +22,12 @@ public class ShopAppExercise {
         Customer c1 = new Customer();
 
         c1.setName("Pinky");
+        c1.setSize(3);
 
-        System.out.println("Customer name is " + c1.getName());
+        System.out.println("Customer name is " + c1.getName() + "and their size is " + c1.getSize() + ".");
+
 
         
-
         Clothing item1 = new Clothing();
         Clothing item2 = new Clothing();
         Clothing item3 = new Clothing();
