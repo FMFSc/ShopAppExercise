@@ -59,7 +59,7 @@ public class Customer {
                 setSize ("L");
                 break;
             default:
-                setSize ("X");
+                setSize ("XL");
         }
     }    
     
