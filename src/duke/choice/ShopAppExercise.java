@@ -23,6 +23,9 @@ public class ShopAppExercise {
 
 //        c1.setName("Pinky");
 //        c1.setSize(3);
+
+        System.out.println("Minimum price: " + Clothing.MIN_PRICE);
+
         Clothing item1 = new Clothing("Blue Jacket", 20.9, "M");
         Clothing item2 = new Clothing("Orange T-shirt",10.5, "S");
         Clothing item3 = new Clothing("Green Scarf",5, "S");
