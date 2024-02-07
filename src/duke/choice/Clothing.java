@@ -18,7 +18,7 @@ public class Clothing {
         MIN_TAX = 0.2;
     }
 
-    public Clothing(String description, String size) {
+    public Clothing(String description,double price, String size) {
         this.description = description;
         this.size = size;
     }
