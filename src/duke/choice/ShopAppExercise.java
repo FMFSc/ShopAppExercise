@@ -19,37 +19,34 @@ public class ShopAppExercise {
         //total = tax * price;
         System.out.println("Welcome to the Duke Choice Shop");
 
-        Customer c1 = new Customer();
+        Customer c1 = new Customer("Pinky ", 3);
 
-        c1.setName("Pinky");
-        c1.setSize(3);
+//        c1.setName("Pinky");
+//        c1.setSize(3);
+        Clothing item1 = new Clothing("Blue Jacket", "M");
+        Clothing item2 = new Clothing("Orange T-shirt", "S");
+        Clothing item3 = new Clothing("Green Scarf", "S");
+        Clothing item4 = new Clothing("Blue T-shirt", "S");
 
-
-
-        Clothing item1 = new Clothing();
-        Clothing item2 = new Clothing();
-        Clothing item3 = new Clothing();
-        Clothing item4 = new Clothing();
-
-        item1.setDescription("Blue Jacket");
+        //item1.setDescription("Blue Jacket");
         item1.setPrice(20.9);
-        item1.setSize("M");
-        item2.setDescription("Orange T-shirt");
+        //item1.setSize("M");
+        //item2.setDescription("Orange T-shirt");
         item2.setPrice(10.5);
-        item2.setSize("S");
-        item3.setDescription("Green Scarf");
+        //item2.setSize("S");
+        //item3.setDescription("Green Scarf");
         item3.setPrice(5);
-        item3.setSize("S");
-        item4.setDescription("Blue T-shirt");
+        //item3.setSize("S");
+        // item4.setDescription("Blue T-shirt");
         item4.setPrice(10.5);
-        item4.setSize("S");
+        //item4.setSize("S");
 
         Clothing[] items = new Clothing[4];
         items[0] = item1;
         items[1] = item2;
         items[2] = item3;
         items[3] = item4;
-        
+
         c1.addItems(items);
 
         //just a test 2
@@ -58,7 +55,6 @@ public class ShopAppExercise {
         //total = (item1.price + item2.price * 2);
         //calculating total with a for each loop
         //System.out.println("Total = " + total);
-        
         System.out.println("Customer name is " + c1.getName() + "and their size is " + c1.getSize() + ", " + c1.getTotalClothingCost());
 
         for (Clothing item : c1.getItems())

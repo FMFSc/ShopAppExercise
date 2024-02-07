@@ -18,6 +18,17 @@ public class Clothing {
         MIN_TAX = 0.2;
     }
 
+    public Clothing(String description, String size) {
+        this.description = description;
+        this.size = size;
+    }
+
+    public Clothing(double price) {
+        this.price = price;
+    }
+    
+    
+
     /**
      * @return the description
      */
