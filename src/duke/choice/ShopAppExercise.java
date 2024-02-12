@@ -77,7 +77,8 @@ public class ShopAppExercise {
         }
         try
         {
-            average = average / count;
+            average = (count == 0) ? 0 : average / count;
+            //average = average / count;
 
             System.out.println("Average price " + average + ", Count " + count);
         } catch (ArithmeticException e)
