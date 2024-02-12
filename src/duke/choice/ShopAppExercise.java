@@ -12,9 +12,13 @@ public class ShopAppExercise {
     public static void main(String[] args) {
         double total;
         int measurement;
+        int average;
+        int count;
 
         measurement = 3;
         total = 0;
+        average = 0;
+        count = 0;
 
         //total = tax * price;
         System.out.println("Welcome to the Duke Choice Shop");
@@ -23,13 +27,12 @@ public class ShopAppExercise {
 
 //        c1.setName("Pinky");
 //        c1.setSize(3);
-
         System.out.println("Minimum price: " + Clothing.MIN_PRICE);
 
         Clothing item1 = new Clothing("Blue Jacket", 20.9, "M");
-        Clothing item2 = new Clothing("Orange T-shirt",10.5, "S");
-        Clothing item3 = new Clothing("Green Scarf",5, "S");
-        Clothing item4 = new Clothing("Blue T-shirt",10.5, "S");
+        Clothing item2 = new Clothing("Orange T-shirt", 10.5, "S");
+        Clothing item3 = new Clothing("Green Scarf", 5, "S");
+        Clothing item4 = new Clothing("Blue T-shirt", 10.5, "S");
 
         //item1.setDescription("Blue Jacket");
         //item1.setPrice(20.9);
@@ -43,7 +46,6 @@ public class ShopAppExercise {
         // item4.setDescription("Blue T-shirt");
         //item4.setPrice(10.5);
         //item4.setSize("S");
-
         Clothing[] items = new Clothing[4];
         items[0] = item1;
         items[1] = item2;
@@ -63,6 +65,24 @@ public class ShopAppExercise {
         for (Clothing item : c1.getItems())
         {
             System.out.println("Item: " + item.getDescription());
+        }
+
+        for (Clothing item : c1.getItems())
+        {
+            if (item.getSize().equals("L"))
+            {
+                count++;
+                average += item.getPrice();
+            }
+        }
+        try
+        {
+            average = average / count;
+
+            System.out.println("Average price " + average + ", Count " + count);
+        } catch (ArithmeticException e)
+        {
+            System.out.println("Don´t divide by 0!");
         }
 
     }
