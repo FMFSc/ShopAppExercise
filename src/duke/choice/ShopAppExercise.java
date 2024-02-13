@@ -1,6 +1,13 @@
 package duke.choice;
 
 import java.util.Arrays;
+import io.helidon.webserver.Routing;
+import io.helidon.webserver.ServerConfiguration;
+import io.helidon.webserver.WebServer;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -94,6 +101,18 @@ public class ShopAppExercise {
         {
             //System.out.println("Item: " + item.getDescription());
             System.out.println("Item: " + item);
+        }
+
+        try
+        {
+            ItemList list = new ItemList(items);
+            Routing routing = Routing.builder().get("/items", list).build();
+            ServerConfiguration config = ServerConfiguration.builder().bindAddress(InetAddress.getLocalHost()).port(8888).build();
+            WebServer ws = WebServer.create(config, routing);
+            ws.start();
+        } catch (UnknownHostException ex)
+        {
+            ex.printStackTrace();
         }
 
     }
